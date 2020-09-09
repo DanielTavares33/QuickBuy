@@ -1,11 +1,12 @@
 ﻿using QuickBuy.Dominio.ObjectValeu;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace QuickBuy.Dominio.Entity
 {
-	public class Request
+	public class Request : Entity
 	{
 		public int Id { get; set; }
 		public DateTime RequestDate { get; set; }
@@ -24,5 +25,16 @@ namespace QuickBuy.Dominio.Entity
 		/// Request can have one or multiple items.
 		/// </summary>
 		public ICollection<ItemRequest> ItemsRequest { get; set; }
+
+		public override void Validate()
+		{
+			ClearValidationMessages();
+
+			if (!ItemsRequest.Any())
+				AddValidationMessages("Crítica - Pedido não pode ficar sem item de pedido");
+
+			if (string.IsNullOrEmpty(PostalCode))
+				AddValidationMessages("Crítica - Código Postal tem que estar preenchido");
+		}
 	}
 }

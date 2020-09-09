@@ -2,7 +2,7 @@
 
 namespace QuickBuy.Dominio.Entity
 {
-	public class User
+	public class User : Entity
 	{
 		public int Id { get; set; }
 		public string Email { get; set; }
@@ -13,6 +13,11 @@ namespace QuickBuy.Dominio.Entity
 		/// <summary>
 		/// One User can have multiple requests.
 		/// </summary>
-		public ICollection<Request> Requests { get; set; }	
+		public ICollection<Request> Requests { get; set; }
+
+		public override void Validate()
+		{
+			throw new System.NotImplementedException();
+		}
 	}
 }
