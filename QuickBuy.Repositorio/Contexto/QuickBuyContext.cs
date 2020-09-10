@@ -11,5 +11,10 @@ namespace QuickBuy.Repositorio.Contexto
 		public DbSet<Product> Products { get; set; }
 		public DbSet<ItemRequest> ItemsRequests { get; set; }
 		public DbSet<PaymentMethod> PaymentMethod { get; set; }
+
+		public QuickBuyContext(DbContextOptions options) : base(options)
+		{
+
+		}
 	}
 }
