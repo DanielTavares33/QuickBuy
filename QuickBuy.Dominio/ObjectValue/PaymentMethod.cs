@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace QuickBuy.Dominio.ObjectValeu
+namespace QuickBuy.Dominio.ObjectValue
 {
 	public class PaymentMethod
 	{

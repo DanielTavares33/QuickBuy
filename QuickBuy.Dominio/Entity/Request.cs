@@ -1,4 +1,4 @@
-﻿using QuickBuy.Dominio.ObjectValeu;
+﻿using QuickBuy.Dominio.ObjectValue;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -35,6 +35,9 @@ namespace QuickBuy.Dominio.Entity
 
 			if (string.IsNullOrEmpty(PostalCode))
 				AddValidationMessages("Crítica - Código Postal tem que estar preenchido");
+
+			if (PaymentMethodId == 0)
+				AddValidationMessages("Crítica - A forma de pagamento não foi informada");
 		}
 	}
 }
