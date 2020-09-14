@@ -8,7 +8,17 @@ namespace QuickBuy.Repositorio.Config
 	{
 		public void Configure(EntityTypeBuilder<PaymentMethod> builder)
 		{
-			throw new System.NotImplementedException();
+			builder.HasKey(pm => pm.Id);
+
+			builder
+				.Property(pm => pm.Name)
+				.IsRequired()
+				.HasMaxLength(50);
+
+			builder
+				.Property(pm => pm.Description)
+				.IsRequired()
+				.HasMaxLength(100);
 		}
 	}
 }
