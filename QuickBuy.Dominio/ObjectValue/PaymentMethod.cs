@@ -25,5 +25,10 @@ namespace QuickBuy.Dominio.ObjectValue
 		{
 			get { return Id == (int)PaymentMethodEnum.Deposit; }
 		}
+
+		public bool IsMbWay
+		{
+			get { return Id == (int)PaymentMethodEnum.MbWay; }
+		}
 	}
 }

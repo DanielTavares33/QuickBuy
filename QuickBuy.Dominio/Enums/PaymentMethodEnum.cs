@@ -8,6 +8,7 @@ namespace QuickBuy.Dominio.Enums
 	{
 		NotDefined = 0,
 		CreditCard = 1,
-		Deposit = 2
+		Deposit = 2,
+		MbWay = 3
 	}
 }
