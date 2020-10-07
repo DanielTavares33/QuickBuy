@@ -11,7 +11,7 @@ namespace QuickBuy.Dominio.Entity
 		public string LastName { get; set; }
 
 		/// <summary>
-		/// One User can have multiple requests.
+		/// One User can have zero or multiple requests.
 		/// </summary>
 		public virtual ICollection<Request> Requests { get; set; }
 

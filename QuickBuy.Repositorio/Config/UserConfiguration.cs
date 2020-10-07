@@ -31,10 +31,10 @@ namespace QuickBuy.Repositorio.Config
 				.IsRequired()
 				.HasMaxLength(50);
 
-			//builder
-			//	.Property(u => u.Requests)
-
-
+			// Only one User can have multiple requests.
+			builder
+				.HasMany(u => u.Requests)
+				.WithOne(p => p.User);
 		}
 	}
 }
