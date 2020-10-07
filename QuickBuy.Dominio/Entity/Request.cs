@@ -11,6 +11,7 @@ namespace QuickBuy.Dominio.Entity
 		public int Id { get; set; }
 		public DateTime RequestDate { get; set; }
 		public int UserId { get; set; }
+		public virtual User User { get; set; }
 		public  DateTime DeliveryDateForecast { get; set; }
 		public string PostalCode { get; set; }
 		public string City { get; set; }

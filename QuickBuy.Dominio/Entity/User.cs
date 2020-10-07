@@ -13,7 +13,7 @@ namespace QuickBuy.Dominio.Entity
 		/// <summary>
 		/// One User can have multiple requests.
 		/// </summary>
-		public ICollection<Request> Requests { get; set; }
+		public virtual ICollection<Request> Requests { get; set; }
 
 		public override void Validate()
 		{
