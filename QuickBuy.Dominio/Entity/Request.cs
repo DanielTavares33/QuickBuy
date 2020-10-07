@@ -20,12 +20,12 @@ namespace QuickBuy.Dominio.Entity
 		public int AddressNumber { get; set; }
 
 		public int PaymentMethodId { get; set; }
-		public PaymentMethod PaymentMethod { get; set; }
+		public virtual PaymentMethod PaymentMethod { get; set; }
 
 		/// <summary>
 		/// Request can have one or multiple items.
 		/// </summary>
-		public ICollection<ItemRequest> ItemsRequest { get; set; }
+		public virtual ICollection<ItemRequest> ItemsRequest { get; set; }
 
 		public override void Validate()
 		{
