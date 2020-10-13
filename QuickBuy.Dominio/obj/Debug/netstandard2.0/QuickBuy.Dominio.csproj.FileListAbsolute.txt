@@ -6,3 +6,4 @@ C:\Users\danpe\Desktop\CODE\QuickBuy\QuickBuy.Dominio\obj\Debug\netstandard2.0\Q
 C:\Users\danpe\Desktop\CODE\QuickBuy\QuickBuy.Dominio\obj\Debug\netstandard2.0\QuickBuy.Dominio.AssemblyInfo.cs
 C:\Users\danpe\Desktop\CODE\QuickBuy\QuickBuy.Dominio\obj\Debug\netstandard2.0\QuickBuy.Dominio.dll
 C:\Users\danpe\Desktop\CODE\QuickBuy\QuickBuy.Dominio\obj\Debug\netstandard2.0\QuickBuy.Dominio.pdb
+C:\Users\danpe\Desktop\CODE\QuickBuy\QuickBuy.Dominio\obj\Debug\netstandard2.0\QuickBuy.Dominio.csprojAssemblyReference.cache
