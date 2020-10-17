@@ -1,9 +1,10 @@
 import {Component} from "@angular/core";
 
 @Component({
-    selector: "produto", //tag onde o ProductComponent vai ser renderizado
+    selector: "app-produto", //tag where the ProductComponent is rendered
     template: ""
 })
+
 export class ProductComponent {
     public name: string;
 
