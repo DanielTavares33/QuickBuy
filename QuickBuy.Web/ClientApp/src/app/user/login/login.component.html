@@ -9,14 +9,18 @@
       name="email"
       placeholder="Email"
       class="form-control mb-2"
+      [ngClass] = "{
+        'is-invalid': email.invalid && (email.dirty || email.touched),
+        'is-valid': email.valid && (email.dirty || email.touched)
+      }"
       [(ngModel)]="user.email"
       #email="ngModel"
       email
       required
     />
-    <div class="alert alert-danger" *ngIf="email.invalid && (email.dirty || email.touched)">
+    <div class="invalid-feedback" *ngIf="email.invalid && (email.dirty || email.touched)">
         <div *ngIf="email.errors.required">
-            Insert a email
+            Enter an email
         </div>
         <div *ngIf="email.errors.email">
             Email not valid
