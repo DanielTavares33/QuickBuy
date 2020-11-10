@@ -18,7 +18,7 @@
       email
       required
     />
-    <div class="invalid-feedback" *ngIf="email.invalid && (email.dirty || email.touched)">
+    <div class="invalid-feedback mb-2" *ngIf="email.invalid && (email.dirty || email.touched)">
         <div *ngIf="email.errors.required">
             Enter an email
         </div>
@@ -34,10 +34,14 @@
       placeholder="Password"
       class="form-control mb-2"
       [(ngModel)]="user.password"
+      [ngClass] = "{
+        'is-invalid': password.invalid && (password.dirty || password.touched),
+        'is-valid': password.valid && (password.dirty || password.touched)
+      }"
       #password="ngModel"
       required
     />
-    <div class="alert alert-danger" *ngIf="password.invalid && (password.dirty || password.touched)">
+    <div class="invalid-feedback mb-2" *ngIf="password.invalid && (password.dirty || password.touched)">
         Insert a password
     </div>
     <button class="btn btn-primary btn-block" type="submit" (click)="login()">
