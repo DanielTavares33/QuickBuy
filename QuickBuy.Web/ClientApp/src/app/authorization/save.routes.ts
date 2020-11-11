@@ -12,9 +12,13 @@ export class SaveRoutes implements CanActivate{
     }
 
     canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
-        //this.router.navigate(['/login']);
+        var authenticated = localStorage.getItem("user-authenticated")
+        if (authenticated == "1") {
+            return true;
+        }
+        this.router.navigate(['/login'], {queryParams:{returnUrl: state.url}});
         // if user is authenticated
-        return true;
+        return false;
     }
     
 }
