@@ -12,6 +12,7 @@ import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { ProductComponent} from "./product/product.component";
 import { LoginComponent } from './user/login/login.component';
 import { SaveRoutes } from './authorization/save.routes';
+import { UserService } from './services/user/user.service';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,7 @@ import { SaveRoutes } from './authorization/save.routes';
       { path: 'login', component: LoginComponent },
     ])
   ],
-  providers: [],
+  providers: [UserService,],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
