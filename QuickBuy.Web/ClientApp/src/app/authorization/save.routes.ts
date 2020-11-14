@@ -12,7 +12,7 @@ export class SaveRoutes implements CanActivate{
     }
 
     canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
-        var authenticated = localStorage.getItem("user-authenticated")
+        var authenticated = sessionStorage.getItem("user-authenticated")
         if (authenticated == "1") {
             return true;
         }
