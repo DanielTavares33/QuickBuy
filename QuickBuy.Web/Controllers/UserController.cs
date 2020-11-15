@@ -4,6 +4,7 @@ using System;
 
 namespace QuickBuy.Web.Controllers
 {
+	[Route("api/[Controller]")]
 	public class UserController : Controller
 	{
 		[HttpPost]
@@ -11,6 +12,7 @@ namespace QuickBuy.Web.Controllers
 		{
 			try
 			{
+				return Ok();
 
 			}
 			catch (Exception ex)
@@ -24,7 +26,7 @@ namespace QuickBuy.Web.Controllers
 		{
 			try
 			{
-
+				return Ok();
 			}
 			catch (Exception ex)
 			{
@@ -37,7 +39,7 @@ namespace QuickBuy.Web.Controllers
 		{
 			try
 			{
-				if (user.Email == "danpertav@gmail.com" && user.Password == "123")
+				if (user.Email == "dantavper@hotmail.com" && user.Password == "123")
 				{
 					return Ok(user);
 				}

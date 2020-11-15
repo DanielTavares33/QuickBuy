@@ -21,6 +21,6 @@ export class UserService {
             password: user.password
         }
 
-        return this.http.post<User>(this.baseURL + "api/user", body, {headers});
+        return this.http.post<User>(this.baseURL + "api/user/VerifyUser", body, {headers});
     }
 }

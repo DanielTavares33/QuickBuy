@@ -23,7 +23,14 @@ export class LoginComponent implements OnInit{
 
     login(){
 
-        this.userService.verifyUser(this.user).subscribe();
+        this.userService.verifyUser(this.user).subscribe(
+            data => {
+                console.log(data);
+            },
+            error => {
+                console.log(error);
+            }
+        );
 
         // if (this.user.email == "dantavper@hotmail.com" && this.user.password == "123") {
         //     sessionStorage.setItem("user-authenticated","1");
