@@ -12,6 +12,7 @@ export class LoginComponent implements OnInit{
     public user;
     public userAuthentication: boolean;
     public returnUrl: string;
+    public message: string;
 
     constructor(private router: Router, private activatedRouter: ActivatedRoute, private userService: UserService) {
     }
@@ -25,10 +26,19 @@ export class LoginComponent implements OnInit{
 
         this.userService.verifyUser(this.user).subscribe(
             data => {
-                console.log(data);
+                var returnUser: User;
+                returnUser = data;
+                sessionStorage.setItem("user-authenticated", "1");
+                sessionStorage.setItem("user-email", returnUser.email);
+
+                if (this.returnUrl == null) {
+                    this.router.navigate(['/'])
+                }else {
+                    this.router.navigate([this.returnUrl]);
+                }
             },
-            error => {
-                console.log(error);
+            err => {
+                this.message = err.error;
             }
         );
 
