@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "rdFpcDZeSrVBlQAzc5SY1nv4nbruMK9Id+ZiiP3qhTjbEAdk6qs6Gmbd2LsbKGyIbCsvx4vyptJJFUbLFoDpzw==",
+  "dgSpecHash": "8kPQkQ4SKpe19YA5aMm+bIPQwCm4/wVhvSpXu6L2G1MKYD01LAkJ3Z3NQr/3DIeD54Apeb+UlJpklmnCZJgKEw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\danpe\\Desktop\\CODE\\QuickBuy\\QuickBuy.Dominio\\QuickBuy.Dominio.csproj",
+  "projectFilePath": "C:\\Users\\DPT\\source\\repos\\DanielTavares33\\QuickBuy\\QuickBuy.Dominio\\QuickBuy.Dominio.csproj",
   "expectedPackageFiles": [
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+    "C:\\Users\\DPT\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\DPT\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
   ],
   "logs": []
 }

@@ -179,23 +179,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\danpe\\.nuget\\packages\\": {},
+    "C:\\Users\\DPT\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\danpe\\Desktop\\CODE\\QuickBuy\\QuickBuy.Dominio\\QuickBuy.Dominio.csproj",
+      "projectUniqueName": "C:\\Users\\DPT\\source\\repos\\DanielTavares33\\QuickBuy\\QuickBuy.Dominio\\QuickBuy.Dominio.csproj",
       "projectName": "QuickBuy.Dominio",
-      "projectPath": "C:\\Users\\danpe\\Desktop\\CODE\\QuickBuy\\QuickBuy.Dominio\\QuickBuy.Dominio.csproj",
-      "packagesPath": "C:\\Users\\danpe\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\danpe\\Desktop\\CODE\\QuickBuy\\QuickBuy.Dominio\\obj\\",
+      "projectPath": "C:\\Users\\DPT\\source\\repos\\DanielTavares33\\QuickBuy\\QuickBuy.Dominio\\QuickBuy.Dominio.csproj",
+      "packagesPath": "C:\\Users\\DPT\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\DPT\\source\\repos\\DanielTavares33\\QuickBuy\\QuickBuy.Dominio\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\danpe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\DPT\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -207,6 +207,7 @@
       },
       "frameworks": {
         "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
           "projectReferences": {}
         }
       },
@@ -218,6 +219,7 @@
     },
     "frameworks": {
       "netstandard2.0": {
+        "targetAlias": "netstandard2.0",
         "dependencies": {
           "NETStandard.Library": {
             "suppressParent": "All",
