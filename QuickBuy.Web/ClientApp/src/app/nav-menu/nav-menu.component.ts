@@ -23,11 +23,11 @@ export class NavMenuComponent {
   }
 
   public userLogged(): boolean {
-    return sessionStorage.getItem("user-authenticated") == "1";
+    return this.userService.user_authenticated();
   }
 
   exitLogin() {
-    sessionStorage.setItem("user-authenticated", "");
+    this.userService.clean_session();
     this.router.navigate(['/']);
   }
 }

@@ -14,8 +14,7 @@ export class SaveRoutes implements CanActivate{
 
     canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
         // this.userService
-        var authenticated = sessionStorage.getItem("user-authenticated")
-        if (authenticated == "1") {
+        if (this.userService.user_authenticated()) {
             return true;
         }
         this.router.navigate(['/login'], {queryParams:{returnUrl: state.url}});

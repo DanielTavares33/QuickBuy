@@ -25,11 +25,13 @@ export class LoginComponent implements OnInit{
     login(){
 
         this.userService.verifyUser(this.user).subscribe(
-            data => {
-                var returnUser: User;
-                returnUser = data;
-                sessionStorage.setItem("user-authenticated", "1");
-                sessionStorage.setItem("user-email", returnUser.email);
+            user_json => {
+
+                this.userService.user = user_json;
+                // var returnUser: User;
+                // returnUser = data;
+                // sessionStorage.setItem("user-authenticated", "1");
+                // sessionStorage.setItem("user-email", returnUser.email);
 
                 if (this.returnUrl == null) {
                     this.router.navigate(['/'])
