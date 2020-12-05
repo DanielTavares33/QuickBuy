@@ -44,7 +44,8 @@
     <div class="invalid-feedback mb-2" *ngIf="password.invalid && (password.dirty || password.touched)">
         Insert a password
     </div>
-    <button class="btn btn-primary btn-block" type="submit" (click)="login()">
+    <button class="btn btn-primary btn-block" type="submit" (click)="login()" [disabled]="active_spinner">
+      <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true" *ngIf="active_spinner"></span>
       Login
     </button>
     <div class="alert alert-danger" *ngIf="message">

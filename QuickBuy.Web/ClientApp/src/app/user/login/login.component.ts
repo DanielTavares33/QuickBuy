@@ -13,6 +13,7 @@ export class LoginComponent implements OnInit{
     public userAuthentication: boolean;
     public returnUrl: string;
     public message: string;
+    private active_spinner: boolean;
 
     constructor(private router: Router, private activatedRouter: ActivatedRoute, private userService: UserService) {
     }
@@ -23,10 +24,9 @@ export class LoginComponent implements OnInit{
     }
 
     login(){
-
+        this.active_spinner = true;
         this.userService.verifyUser(this.user).subscribe(
             user_json => {
-
                 this.userService.user = user_json;
                 // var returnUser: User;
                 // returnUser = data;
@@ -41,6 +41,7 @@ export class LoginComponent implements OnInit{
             },
             err => {
                 this.message = err.error;
+                this.active_spinner = false;
             }
         );
 
