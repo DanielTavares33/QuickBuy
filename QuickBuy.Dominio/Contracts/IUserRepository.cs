@@ -7,6 +7,6 @@ namespace QuickBuy.Dominio.Contracts
 {
 	public interface IUserRepository : IBaseRepository<User>
 	{
-
+		User Get(string email, string password);
 	}
 }
