@@ -20,7 +20,7 @@
     />
     <div class="invalid-feedback mb-2" *ngIf="email.invalid && (email.dirty || email.touched)">
         <div *ngIf="email.errors.required">
-            Enter an email
+            Enter a email
         </div>
         <div *ngIf="email.errors.email">
             Email not valid
@@ -48,6 +48,9 @@
       <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true" *ngIf="active_spinner"></span>
       Login
     </button>
+    <div>
+      You don't have a account? <a [routerLink]='["/signup"]'>Signup</a>
+    </div>
     <div class="alert alert-danger" *ngIf="message">
         {{message}}
     </div>

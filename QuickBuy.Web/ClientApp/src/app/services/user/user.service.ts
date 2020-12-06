@@ -11,6 +11,10 @@ export class UserService {
     private baseURL: string
     private _user: User
 
+    constructor(private http: HttpClient, @Inject('BASE_URL') baseUrl: string){
+        this.baseURL = baseUrl;
+    }
+
     set user(user: User){
         sessionStorage.setItem("user-authenticated", JSON.stringify(user));
         this._user = user;
@@ -22,19 +26,18 @@ export class UserService {
         return this._user;
     }
 
+    /// Verify if the User is authenticated
     public user_authenticated(): boolean {
         return this._user != null && this._user.email != "" && this._user.password != "";
     }
 
+    // Clean User Session
     public clean_session(){
         sessionStorage.setItem("user-authenticated", "");
         this._user = null;
     }
     
-    constructor(private http: HttpClient, @Inject('BASE_URL') baseUrl: string){
-        this.baseURL = baseUrl;
-    }
-
+    // Verify User
     public verifyUser(user: User): Observable<User> {
         const headers = new HttpHeaders().set('content-type', 'application/json');
         var body = {
@@ -43,5 +46,18 @@ export class UserService {
         }
 
         return this.http.post<User>(this.baseURL + "api/user/VerifyUser", body, {headers});
+    }
+
+    // Signup User
+    public signupUser(user: User):Observable<User>{
+        const headers = new HttpHeaders().set('content-type', 'application/json');
+        var body = {
+            email: user.email,
+            password: user.password,
+            name: user.name,
+            lastName: user.lastName
+        }
+
+        return this.http.post<User>(this.baseURL + "api/user", body, {headers});
     }
 }
