@@ -11,6 +11,7 @@ import { LoginComponent } from './user/login/login.component';
 import { SaveRoutes } from './authorization/save.routes';
 import { UserService } from './services/user/user.service';
 import { SignupUserComponent } from './user/signup/signup.user.component';
+import { ProductService } from './services/product/product.service';
 
 @NgModule({
   declarations: [
@@ -27,12 +28,14 @@ import { SignupUserComponent } from './user/signup/signup.user.component';
     FormsModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
-      { path: 'product', component: ProductComponent, canActivate:[SaveRoutes] },
+      { path: 'product', component: ProductComponent},
       { path: 'login', component: LoginComponent },
       { path: 'signup', component: SignupUserComponent },
     ])
   ],
-  providers: [UserService,],
+  providers: [UserService, ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+// { path: 'product', component: ProductComponent, canActivate:[SaveRoutes] },

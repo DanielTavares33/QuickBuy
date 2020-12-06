@@ -1,0 +1,12 @@
+<h1 class="h4">Register Product</h1>
+<label for="inputName" class="sr-only">Name</label>
+<input 
+    type="text" 
+    id="inputName" 
+    name="inputName" 
+    placeholder="Name of Product" 
+    class="form-control mb-2 col-md-4"
+    [ngClass]=""
+    [(ngModel)]="product.name" 
+    #name="ngModel"
+    required/>
