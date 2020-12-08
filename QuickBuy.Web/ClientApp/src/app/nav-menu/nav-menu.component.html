@@ -17,9 +17,15 @@
           <li class="nav-item" [routerLinkActive]='["link-active"]' *ngIf="!userLogged()">
             <a class="nav-link text-dark" [routerLink]='["/login"]'>Login</a>
           </li>
-          <li class="nav-item" [routerLinkActive]='["link-active"]' *ngIf="userLogged()">
-            <a class="nav-item nav-link text-dark" [routerLink]='["/"]' (click)="exitLogin()">Sair</a>
+          <li class="nav-item dropdown" *ngIf="userLogged()">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false" id="linkMenu" data-toggle="dropdown">{{user.name}}</a>
+            <ul class="dropdown-menu" aria-labelledby="linkMenu">
+              <li class="dropdown-item" role="menu" [routerLink]='["/exitLogin"]' (click)="exitLogin()">Exit</li>
+            </ul>
           </li>
+          <!-- <li class="nav-item" [routerLinkActive]='["link-active"]' *ngIf="userLogged()">
+            <a class="nav-item nav-link text-dark" [routerLink]='["/"]' (click)="exitLogin()">Sair</a>
+          </li> -->
         </ul>
       </div>
     </div>

@@ -30,4 +30,8 @@ export class NavMenuComponent {
     this.userService.clean_session();
     this.router.navigate(['/']);
   }
+
+  get user() {
+    return this.userService.user
+  }
 }
