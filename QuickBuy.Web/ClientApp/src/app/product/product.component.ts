@@ -11,9 +11,22 @@ import { ProductService } from "../services/product/product.service";
 export class ProductComponent implements OnInit{
 
     public product: Product
+    public selectedFile: File;
 
     constructor(private productService: ProductService) {
        
+    }
+
+    public inputChange(files: FileList){
+        this.selectedFile = files.item(0)
+        this.productService.sendFile(this.selectedFile).subscribe(
+            file => {
+
+            },
+            errors => {
+
+            }
+        )
     }
 
     ngOnInit(): void {
