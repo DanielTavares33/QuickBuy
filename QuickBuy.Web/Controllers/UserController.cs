@@ -16,10 +16,18 @@ namespace QuickBuy.Web.Controllers
 		}
 
 		[HttpPost]
-		public ActionResult Post()
+		public ActionResult Post([FromBody] User user)
 		{
 			try
 			{
+				var registeredUser = _userRepository.Get(user.Email);
+
+				if (registeredUser != null)
+				{
+					return BadRequest("User already exists");
+				}
+
+				_userRepository.Add(user);
 				return Ok();
 
 			}

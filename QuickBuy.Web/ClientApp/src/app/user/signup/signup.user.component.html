@@ -97,6 +97,9 @@
       <div class="alert alert-danger" *ngIf="message">
           {{message}}
       </div>
+      <div class="alert alert-success" *ngIf="registeredUser">
+        User registered with success <a class="alert-link" [routerLink]='["/login"]'>Click here</a>
+      </div>
     </form>
   </div>
   

@@ -11,6 +11,10 @@ export class UserService {
     private baseURL: string
     private _user: User
 
+    get headers(): HttpHeaders {
+        return new HttpHeaders().set('content-type', 'application/json')
+    }
+
     constructor(private http: HttpClient, @Inject('BASE_URL') baseUrl: string){
         this.baseURL = baseUrl;
     }
@@ -49,15 +53,7 @@ export class UserService {
     }
 
     // Signup User
-    public signupUser(user: User):Observable<User>{
-        const headers = new HttpHeaders().set('content-type', 'application/json');
-        var body = {
-            email: user.email,
-            password: user.password,
-            name: user.name,
-            lastName: user.lastName
-        }
-
-        return this.http.post<User>(this.baseURL + "api/user", body, {headers});
+    public signupUser(user: User): Observable<User>{
+        return this.http.post<User>(this.baseURL + "api/user", JSON.stringify(user), {headers: this.headers});
     }
 }

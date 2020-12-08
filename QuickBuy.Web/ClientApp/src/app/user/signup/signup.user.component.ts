@@ -10,6 +10,9 @@ import { UserService } from "src/app/services/user/user.service";
 export class SignupUserComponent implements OnInit {
 
     public user: User
+    public active_spinner:boolean
+    public message: string
+    public registeredUser: boolean
     
     constructor(private userService: UserService) {
 
@@ -20,12 +23,17 @@ export class SignupUserComponent implements OnInit {
     }
 
     public signup(){
+        this.active_spinner = true
+
         this.userService.signupUser(this.user).subscribe(
             userJson => {
-
+                this.registeredUser = true
+                this.message = ""
+                this.active_spinner = false
             },
             errors => {
-
+                this.message = errors.error;
+                this.active_spinner = false
             }
         );
     }
