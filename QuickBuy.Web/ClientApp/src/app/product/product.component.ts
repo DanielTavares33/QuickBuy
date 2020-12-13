@@ -1,47 +1,50 @@
-import {Component, OnInit} from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { Product } from "../model/product";
 import { ProductService } from "../services/product/product.service";
 
 @Component({
-    selector: "app-produto", //tag where the ProductComponent is rendered
-    templateUrl: "./product.component.html",
-    styleUrls: ["./product.component.css"]
+  selector: "app-produto", //tag where the ProductComponent is rendered
+  templateUrl: "./product.component.html",
+  styleUrls: ["./product.component.css"],
 })
+export class ProductComponent implements OnInit {
+  public product: Product;
+  public selectedFile: File;
+  public active_spinner: boolean;
+  public message: string;
 
-export class ProductComponent implements OnInit{
+  constructor(private productService: ProductService) {}
 
-    public product: Product
-    public selectedFile: File;
+  public inputChange(files: FileList) {
+    this.selectedFile = files.item(0);
+    this.active_spinner = true;
 
-    constructor(private productService: ProductService) {
-       
-    }
+    this.productService.sendFile(this.selectedFile).subscribe(
+      (fileName) => {
+        this.product.fileName = fileName;
+        alert(this.product.fileName);
+        this.active_spinner = false;
+      },
+      (e) => {
+        console.log(e.error);
+      }
+    );
+  }
 
-    public inputChange(files: FileList){
-        this.selectedFile = files.item(0)
-        this.productService.sendFile(this.selectedFile).subscribe(
-            file => {
+  ngOnInit(): void {
+    this.product = new Product();
+  }
 
-            },
-            errors => {
-
-            }
-        )
-    }
-
-    ngOnInit(): void {
-        this.product = new Product()
-    }
-
-    public registerProduct(){
-        this.productService.registerProduct(this.product)
-            .subscribe(
-                productJson => {
-                    console.log(productJson)
-                },
-                error => {
-                    console.log(error.error);
-                }
-            );
-    }
+  public registerProduct() {
+    this.productService.registerProduct(this.product).subscribe(
+      (productJson) => {
+        this.productService.registerProduct(productJson);
+      },
+      (err) => {
+        console.log(err.error);
+        this.message = err.error;
+        this.active_spinner = false;
+      }
+    );
+  }
 }

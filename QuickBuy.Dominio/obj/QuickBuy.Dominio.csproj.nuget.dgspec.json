@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\DPT\\source\\repos\\DanielTavares33\\QuickBuy\\QuickBuy.Dominio\\QuickBuy.Dominio.csproj": {}
+    "C:\\Users\\danie\\source\\repos\\DanielTavares33\\QuickBuy\\QuickBuy.Dominio\\QuickBuy.Dominio.csproj": {}
   },
   "projects": {
-    "C:\\Users\\DPT\\source\\repos\\DanielTavares33\\QuickBuy\\QuickBuy.Dominio\\QuickBuy.Dominio.csproj": {
+    "C:\\Users\\danie\\source\\repos\\DanielTavares33\\QuickBuy\\QuickBuy.Dominio\\QuickBuy.Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DPT\\source\\repos\\DanielTavares33\\QuickBuy\\QuickBuy.Dominio\\QuickBuy.Dominio.csproj",
+        "projectUniqueName": "C:\\Users\\danie\\source\\repos\\DanielTavares33\\QuickBuy\\QuickBuy.Dominio\\QuickBuy.Dominio.csproj",
         "projectName": "QuickBuy.Dominio",
-        "projectPath": "C:\\Users\\DPT\\source\\repos\\DanielTavares33\\QuickBuy\\QuickBuy.Dominio\\QuickBuy.Dominio.csproj",
-        "packagesPath": "C:\\Users\\DPT\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DPT\\source\\repos\\DanielTavares33\\QuickBuy\\QuickBuy.Dominio\\obj\\",
+        "projectPath": "C:\\Users\\danie\\source\\repos\\DanielTavares33\\QuickBuy\\QuickBuy.Dominio\\QuickBuy.Dominio.csproj",
+        "packagesPath": "C:\\Users\\danie\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\danie\\source\\repos\\DanielTavares33\\QuickBuy\\QuickBuy.Dominio\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\DPT\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\danie\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

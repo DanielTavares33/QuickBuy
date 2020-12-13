@@ -44,6 +44,12 @@ namespace QuickBuy.Web.Controllers
 		{
 			try
 			{
+				product.Validate();
+				if (!product.IsValid)
+				{
+					return BadRequest(product.GetValidationMessages());
+				}
+
 				_productRepository.Add(product);
 
 				return Created("api/product", product);
@@ -62,8 +68,7 @@ namespace QuickBuy.Web.Controllers
 				var formFile = _httpContextAccessor.HttpContext.Request.Form.Files["sendFile"];
 				var fileName = formFile.FileName;
 				var extension = fileName.Split(".").Last();
-				var arrayFileName = Path.GetFileNameWithoutExtension(fileName).Take(10).ToArray();
-				var newFileName = new string(arrayFileName).Replace(" ", "-") + "." + extension;
+				string newFileName = GenerateNewFileName(fileName, extension);
 				var filesFolder = _hostingEnvironment.WebRootPath + "\\files\\";
 				var fullName = filesFolder + newFileName;
 
@@ -72,12 +77,21 @@ namespace QuickBuy.Web.Controllers
 					formFile.CopyTo(streamFile);
 				}
 
-				return Ok("File send with success");
+				return Json(newFileName);
 			}
 			catch (Exception ex)
 			{
 				return BadRequest(ex.ToString());
 			}
+		}
+
+		public string GenerateNewFileName(string fileName, string extension)
+		{
+			var arrayFileName = Path.GetFileNameWithoutExtension(fileName).Take(10).ToArray();
+			var newFileName = new string(arrayFileName).Replace(" ", "-");
+			newFileName = $"{newFileName}_{DateTime.Now.Year}{DateTime.Now.Month}{DateTime.Now.Day}{DateTime.Now.Hour}{DateTime.Now.Minute}{DateTime.Now.Second}.{extension}";
+
+			return newFileName;
 		}
 
 	}
