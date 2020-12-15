@@ -36,15 +36,25 @@ export class ProductComponent implements OnInit {
   }
 
   public registerProduct() {
+    this.activeAwait();
     this.productService.registerProduct(this.product).subscribe(
       (productJson) => {
         this.productService.registerProduct(productJson);
+        this.deactivateAwait();
       },
       (err) => {
         console.log(err.error);
         this.message = err.error;
-        this.active_spinner = false;
+        this.deactivateAwait();
       }
     );
+  }
+
+  public activeAwait() {
+    this.active_spinner = true;
+  }
+
+  public deactivateAwait() {
+    this.active_spinner = false;
   }
 }
