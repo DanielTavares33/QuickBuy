@@ -46,14 +46,17 @@ export class ProductService implements OnInit {
     );
   }
 
+  // to get all products this method should return a list of products
   public getAllProducts(): Observable<Product[]> {
     return this.http.get<Product[]>(this._baseUrl + "api/product");
   }
 
+  // get a single product by ID
   public getProduct(productId: number): Observable<Product> {
     return this.http.get<Product>(this._baseUrl + "api/product");
   }
 
+  // send product image to server
   public sendFile(selectedFile: File): Observable<string> {
     const formData: FormData = new FormData();
     formData.append("sendFile", selectedFile, selectedFile.name);
