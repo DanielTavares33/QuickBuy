@@ -60,6 +60,21 @@ namespace QuickBuy.Web.Controllers
 			}
 		}
 
+		[HttpPost("Delete")]
+		public IActionResult Delete([FromBody] Product product)
+		{
+			try
+			{
+				_productRepository.Remove(product);
+
+				return Json(_productRepository.GetAll());
+			}
+			catch (Exception ex)
+			{
+				return BadRequest(ex.ToString());
+			}
+		}
+
 		[HttpPost("SendFile")]
 		public IActionResult SendFile()
 		{

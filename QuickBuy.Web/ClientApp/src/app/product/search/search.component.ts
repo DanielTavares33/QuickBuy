@@ -26,4 +26,18 @@ export class SearchProductComponent implements OnInit {
   public addProduct() {
     this.router.navigate(["/product"]);
   }
+
+  public deleteProduct(product: Product) {
+    var msg = confirm("Delete?");
+    if (msg == true) {
+      this.productService.delete(product).subscribe(
+        (products) => {
+          this.products = products;
+        },
+        (e) => {
+          console.log(e.error);
+        }
+      );
+    }
+  }
 }

@@ -25,8 +25,12 @@
           src="../../../../../files/{{ p.fileName }}"
         />
       </td>
-      <td><a href="#">Edit</a></td>
-      <td><a href="#">Delete</a></td>
+      <td><button class="btn btn-success btn-sm">Edit</button></td>
+      <td>
+        <button class="btn btn-danger btn-sm" (click)="deleteProduct(p)">
+          Delete
+        </button>
+      </td>
     </tr>
   </tbody>
 </table>

@@ -38,8 +38,8 @@ export class ProductService implements OnInit {
     );
   }
 
-  public deleteProduct(product: Product): Observable<Product> {
-    return this.http.post<Product>(
+  public delete(product: Product): Observable<Product[]> {
+    return this.http.post<Product[]>(
       this._baseUrl + "api/product/delete",
       JSON.stringify(product),
       { headers: this.headers }
