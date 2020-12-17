@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
 import { Product } from "../model/product";
 import { ProductService } from "../services/product/product.service";
 
@@ -13,8 +14,9 @@ export class ProductComponent implements OnInit {
   public active_spinner: boolean;
   public message: string;
 
-  constructor(private productService: ProductService) {}
+  constructor(private productService: ProductService, private router: Router) {}
 
+  // this method is to send the image of the product
   public inputChange(files: FileList) {
     this.selectedFile = files.item(0);
     this.active_spinner = true;
@@ -22,7 +24,6 @@ export class ProductComponent implements OnInit {
     this.productService.sendFile(this.selectedFile).subscribe(
       (fileName) => {
         this.product.fileName = fileName;
-        alert(this.product.fileName);
         this.active_spinner = false;
       },
       (e) => {
@@ -41,6 +42,7 @@ export class ProductComponent implements OnInit {
       (productJson) => {
         this.productService.registerProduct(productJson);
         this.deactivateAwait();
+        this.router.navigate(["/search-product"]);
       },
       (err) => {
         console.log(err.error);
