@@ -40,4 +40,9 @@ export class SearchProductComponent implements OnInit {
       );
     }
   }
+
+  public editProduct(product: Product) {
+    sessionStorage.setItem("productSession", JSON.stringify(product));
+    this.router.navigate(["/product"]);
+  }
 }

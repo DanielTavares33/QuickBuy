@@ -50,7 +50,14 @@ namespace QuickBuy.Web.Controllers
 					return BadRequest(product.GetValidationMessages());
 				}
 
-				_productRepository.Add(product);
+				if (product.Id > 0)
+				{
+					_productRepository.Update(product);
+				}
+				else
+				{
+					_productRepository.Add(product);
+				}
 
 				return Created("api/product", product);
 			}
