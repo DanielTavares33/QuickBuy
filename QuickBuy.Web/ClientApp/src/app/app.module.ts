@@ -13,6 +13,7 @@ import { UserService } from "./services/user/user.service";
 import { SignupUserComponent } from "./user/signup/signup.user.component";
 import { ProductService } from "./services/product/product.service";
 import { SearchProductComponent } from "./product/search/search.component";
+import { StoreSearchComponent } from "./store/search/store.search.component";
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { SearchProductComponent } from "./product/search/search.component";
     LoginComponent,
     SignupUserComponent,
     SearchProductComponent,
+    StoreSearchComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: "ng-cli-universal" }),
