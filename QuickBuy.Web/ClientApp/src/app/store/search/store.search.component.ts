@@ -12,5 +12,14 @@ export class StoreSearchComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  constructor(private productService: ProductService) {}
+  constructor(private productService: ProductService) {
+    this.productService.getAllProducts().subscribe(
+      (products) => {
+        this.products = products;
+      },
+      (e) => {
+        console.log(e.error);
+      }
+    );
+  }
 }
