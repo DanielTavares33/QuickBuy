@@ -13,7 +13,7 @@ import { SaveRoutes } from "./authorization/save.routes";
 import { UserService } from "./services/user/user.service";
 import { SignupUserComponent } from "./user/signup/signup.user.component";
 import { ProductService } from "./services/product/product.service";
-import { SearchProductComponent } from "./product/search/search.component";
+import { SearchProductComponent } from "./product/search/search.product.component";
 import { StoreSearchComponent } from "./store/search/store.search.component";
 
 @NgModule({

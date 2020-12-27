@@ -5,8 +5,8 @@ import { ProductService } from "src/app/services/product/product.service";
 
 @Component({
   selector: "search-product",
-  templateUrl: "./search.component.html",
-  styleUrls: ["./search.component.css"],
+  templateUrl: "./search.product.component.html",
+  styleUrls: ["./search.product.component.css"],
 })
 export class SearchProductComponent implements OnInit {
   public products: Product[];
@@ -24,6 +24,7 @@ export class SearchProductComponent implements OnInit {
   }
 
   public addProduct() {
+    sessionStorage.clear();
     this.router.navigate(["/product"]);
   }
 

@@ -19,9 +19,9 @@ C:\Users\DPT\source\repos\DanielTavares33\QuickBuy\QuickBuy.Dominio\obj\Debug\ne
 C:\Users\danie\source\repos\DanielTavares33\QuickBuy\QuickBuy.Dominio\bin\Debug\netstandard2.0\QuickBuy.Dominio.deps.json
 C:\Users\danie\source\repos\DanielTavares33\QuickBuy\QuickBuy.Dominio\bin\Debug\netstandard2.0\QuickBuy.Dominio.dll
 C:\Users\danie\source\repos\DanielTavares33\QuickBuy\QuickBuy.Dominio\bin\Debug\netstandard2.0\QuickBuy.Dominio.pdb
+C:\Users\danie\source\repos\DanielTavares33\QuickBuy\QuickBuy.Dominio\obj\Debug\netstandard2.0\QuickBuy.Dominio.csprojAssemblyReference.cache
 C:\Users\danie\source\repos\DanielTavares33\QuickBuy\QuickBuy.Dominio\obj\Debug\netstandard2.0\QuickBuy.Dominio.csproj.CoreCompileInputs.cache
 C:\Users\danie\source\repos\DanielTavares33\QuickBuy\QuickBuy.Dominio\obj\Debug\netstandard2.0\QuickBuy.Dominio.AssemblyInfoInputs.cache
 C:\Users\danie\source\repos\DanielTavares33\QuickBuy\QuickBuy.Dominio\obj\Debug\netstandard2.0\QuickBuy.Dominio.AssemblyInfo.cs
 C:\Users\danie\source\repos\DanielTavares33\QuickBuy\QuickBuy.Dominio\obj\Debug\netstandard2.0\QuickBuy.Dominio.dll
 C:\Users\danie\source\repos\DanielTavares33\QuickBuy\QuickBuy.Dominio\obj\Debug\netstandard2.0\QuickBuy.Dominio.pdb
-C:\Users\danie\source\repos\DanielTavares33\QuickBuy\QuickBuy.Dominio\obj\Debug\netstandard2.0\QuickBuy.Dominio.csprojAssemblyReference.cache

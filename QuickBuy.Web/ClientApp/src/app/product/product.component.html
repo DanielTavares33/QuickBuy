@@ -36,12 +36,16 @@
   [(ngModel)]="product.description"
   #description="ngModel"
   required
+  minlength="50"
 />
 <div
   class="invalid-feedback mb-2"
   *ngIf="description.invalid && (description.dirty || description.touched)"
 >
   <div *ngIf="description.errors.required">Insert a description</div>
+  <div *ngIf="description.errors.minlength">
+    Field must have 50 characters minimum
+  </div>
 </div>
 
 <label for="inputPrice" class="sr-only">Price</label>
