@@ -1,5 +1,6 @@
 import { importExpr } from "@angular/compiler/src/output/output_ast";
 import { Component, OnInit } from "@angular/core";
+import { Product } from "src/app/model/product";
 import { ProductService } from "src/app/services/product/product.service";
 
 @Component({
@@ -8,7 +9,14 @@ import { ProductService } from "src/app/services/product/product.service";
   styleUrls: ["./store.product.component.css"],
 })
 export class StoreProductComponent implements OnInit {
-  ngOnInit(): void {}
+  public product: Product;
+
+  ngOnInit(): void {
+    var productDetail = sessionStorage.getItem("productDetail");
+    if (productDetail) {
+      this.product = JSON.parse(productDetail);
+    }
+  }
 
   constructor(private productService: ProductService) {}
 }

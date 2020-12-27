@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
 import { Product } from "src/app/model/product";
 import { ProductService } from "src/app/services/product/product.service";
 
@@ -12,7 +13,7 @@ export class StoreSearchComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  constructor(private productService: ProductService) {
+  constructor(private productService: ProductService, private router: Router) {
     this.productService.getAllProducts().subscribe(
       (products) => {
         this.products = products;
@@ -21,5 +22,10 @@ export class StoreSearchComponent implements OnInit {
         console.log(e.error);
       }
     );
+  }
+
+  openProduct(product: Product) {
+    sessionStorage.setItem("productDetail", JSON.stringify(product));
+    this.router.navigate(["/store-product"]);
   }
 }

@@ -2,18 +2,20 @@
 <div class="container" *ngIf="products">
   <div class="row">
     <div class="col-md-4 mb-2" *ngFor="let p of products">
-      <div class="card h-100">
-        <img
-          class="card-top card-image-top"
-          src="../../../../../files/{{ p.fileName }}"
-        />
-        <div class="card-body">
-          <h5 class="card-title">{{ p.name }}</h5>
-          <!-- truncate the showing characters: TruncateModule -->
-          <div class="card-text">{{ p.description | truncate: 50 }}</div>
-          <h5 class="h5">{{ p.price }}€</h5>
+      <a (click)="openProduct(p)">
+        <div class="card h-100">
+          <img
+            class="card-top card-image-top"
+            src="../../../../../files/{{ p.fileName }}"
+          />
+          <div class="card-body">
+            <h5 class="card-title">{{ p.name }}</h5>
+            <!-- truncate the showing characters: TruncateModule -->
+            <div class="card-text">{{ p.description | truncate: 50 }}</div>
+            <h5 class="h5">{{ p.price }}€</h5>
+          </div>
         </div>
-      </div>
+      </a>
     </div>
   </div>
 </div>
