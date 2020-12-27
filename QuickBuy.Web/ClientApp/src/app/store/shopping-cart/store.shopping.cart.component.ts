@@ -1,7 +1,4 @@
-import { isGeneratedFile } from "@angular/compiler/src/aot/util";
-import { THROW_IF_NOT_FOUND } from "@angular/core/src/di/injector";
 import { Product } from "src/app/model/product";
-import { ProductService } from "src/app/services/product/product.service";
 
 export class StoreShoppingCart {
   public products: Product[] = [];
@@ -16,6 +13,7 @@ export class StoreShoppingCart {
         JSON.stringify(this.products)
       );
     } else {
+      // if localStorage have more then one value
       this.products = JSON.parse(productLocalStorage);
       this.products.push(product);
       localStorage.setItem(
