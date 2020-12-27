@@ -1,5 +1,6 @@
 import { importExpr } from "@angular/compiler/src/output/output_ast";
 import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
 import { Product } from "src/app/model/product";
 import { ProductService } from "src/app/services/product/product.service";
 
@@ -18,5 +19,9 @@ export class StoreProductComponent implements OnInit {
     }
   }
 
-  constructor(private productService: ProductService) {}
+  constructor(private productService: ProductService, private router: Router) {}
+
+  public buy() {
+    this.router.navigate(["/store-effectuate"]);
+  }
 }
