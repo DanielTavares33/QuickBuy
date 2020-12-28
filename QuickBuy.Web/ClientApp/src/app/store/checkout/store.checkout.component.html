@@ -1,0 +1,70 @@
+<div class="container">
+  <div class="row mb-16">
+    <div class="col-md-12">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let p of products">
+            <td>
+              <img
+                class="image-table"
+                src="../../../../../files/{{ p.fileName }}"
+              />
+            </td>
+            <td style="width: 60%">{{ p.description }}</td>
+            <td style="width: 10%"></td>
+            <td style="width: 10%">{{ p.price }}€</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <table class="table table-info">
+        <tbody>
+          <tr>
+            <td>
+              The calculation of shipping costs is carried out during checkout
+              and depends on the address and delivery method.
+            </td>
+            <td></td>
+            <td style="color: grey">Total Discount</td>
+            <td style="color: grey">-€4,49</td>
+          </tr>
+          <tr>
+            <td>
+              Do you have a coupon? Insert it in step 4 (payment details).
+            </td>
+            <td></td>
+            <td style="color: grey">Estimated shipping</td>
+            <td style="color: grey">€0,00</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td style="color: black">Cart Total</td>
+            <td style="color: black">€{{ totalValue | number: "1.0-2" }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <button class="btn btn-secondary" (click)="continueShopping()">
+        Continue shopping
+      </button>
+    </div>
+    <div class="col-md-6">
+      <button class="btn btn-danger">Checkout</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+.image-table {
+  width: 50%;
+  height: auto;
+}
+
+.card-header {
+  font-size: medium;
+  font-weight: bold;
+  text-align: center;
+}
+
+.table-info,
+.table-hover {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  background-color: white;
+}
+
+.table-info td {
+  border: none;
+}
+
+.btn-danger {
+  float: right;
+}
