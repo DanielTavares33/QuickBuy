@@ -8,6 +8,7 @@
             <th>Product</th>
             <th>Quantity</th>
             <th>Price</th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
@@ -19,8 +20,22 @@
               />
             </td>
             <td style="width: 60%">{{ p.description }}</td>
-            <td style="width: 10%"></td>
-            <td style="width: 10%">{{ p.price }}€</td>
+            <td style="width: 10%">
+              <input
+                type="number"
+                class="form-control"
+                value="1"
+                (change)="updatePrice(p, $event.target.value)"
+                [(ngModel)]="p.quantityProduct"
+                placeholder="1"
+              />
+            </td>
+            <td style="width: 10%">{{ p.price | number: "1.0-2" }}€</td>
+            <td style="width: 5%">
+              <span (click)="deleteCartProduct(p)"
+                ><i class="fa fa-trash"></i
+              ></span>
+            </td>
           </tr>
         </tbody>
       </table>

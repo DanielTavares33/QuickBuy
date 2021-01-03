@@ -26,6 +26,6 @@ export class StoreProductComponent implements OnInit {
 
   public buy() {
     this.shoppingCart.add(this.product);
-    this.router.navigate(["/store-effectuate"]);
+    this.router.navigate(["/store-checkout"]);
   }
 }

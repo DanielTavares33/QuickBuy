@@ -21,6 +21,24 @@ export class StoreCheckoutComponent implements OnInit {
 
   constructor(private router: Router) {}
 
+  public updatePrice(product: Product, quantity: number) {
+    if (!product.originalPrice) {
+      product.originalPrice = product.price;
+    }
+
+    if (quantity <= 0) {
+      quantity = 1;
+      product.quantityProduct = quantity;
+    }
+    product.price = product.originalPrice * quantity;
+    this.shoppingCart.update(this.products);
+  }
+
+  public deleteCartProduct(product: Product) {
+    this.shoppingCart.removeProduct(product);
+    this.products = this.shoppingCart.getProducts();
+  }
+
   public updateTotal() {
     // reduce expression:
     // applies a function simultaneously against two values of the array (from left-to-right) as to reduce it to a single value.

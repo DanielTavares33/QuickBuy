@@ -22,3 +22,9 @@
 .btn-danger {
   float: right;
 }
+
+.fa-trash {
+  color: red;
+  cursor: pointer;
+  font-size: 20px;
+}

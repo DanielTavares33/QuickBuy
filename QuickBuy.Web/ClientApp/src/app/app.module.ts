@@ -43,7 +43,7 @@ import { StoreCheckoutComponent } from "./store/checkout/store.checkout.componen
       { path: "signup", component: SignupUserComponent },
       { path: "search-product", component: SearchProductComponent },
       { path: "store-product", component: StoreProductComponent },
-      { path: "store-effectuate", component: StoreCheckoutComponent },
+      { path: "store-checkout", component: StoreCheckoutComponent },
     ]),
   ],
   providers: [UserService, ProductService],
