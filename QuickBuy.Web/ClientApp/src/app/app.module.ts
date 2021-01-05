@@ -38,17 +38,27 @@ import { StoreCheckoutComponent } from "./store/checkout/store.checkout.componen
     TruncateModule,
     RouterModule.forRoot([
       { path: "", component: HomeComponent, pathMatch: "full" },
-      { path: "product", component: ProductComponent },
+      {
+        path: "product",
+        component: ProductComponent,
+        canActivate: [SaveRoutes],
+      },
       { path: "login", component: LoginComponent },
       { path: "signup", component: SignupUserComponent },
-      { path: "search-product", component: SearchProductComponent },
+      {
+        path: "search-product",
+        component: SearchProductComponent,
+        canActivate: [SaveRoutes],
+      },
       { path: "store-product", component: StoreProductComponent },
-      { path: "store-checkout", component: StoreCheckoutComponent },
+      {
+        path: "store-checkout",
+        component: StoreCheckoutComponent,
+        canActivate: [SaveRoutes],
+      },
     ]),
   ],
   providers: [UserService, ProductService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
-
-// { path: 'product', component: ProductComponent, canActivate:[SaveRoutes] },
