@@ -1,4 +1,4 @@
-import {Injectable, Inject, inject} from "@angular/core";
+import {Injectable, Inject} from "@angular/core";
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import { Observable } from "rxjs";
 import { User } from "src/app/model/user";
@@ -33,6 +33,11 @@ export class UserService {
     /// Verify if the User is authenticated
     public user_authenticated(): boolean {
         return this._user != null && this._user.email != "" && this._user.password != "";
+    }
+
+    // Verify if the User is Admin
+    public user_admin(): boolean {
+        return this.user_authenticated() && this.user.isAdmin;
     }
 
     // Clean User Session
