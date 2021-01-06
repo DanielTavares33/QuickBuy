@@ -9,6 +9,7 @@ namespace QuickBuy.Dominio.Entity
 		public string Password { get; set; }
 		public string Name { get; set; }
 		public string LastName { get; set; }
+		public bool IsAdmin { get; set; }
 
 		/// <summary>
 		/// One User can have zero or multiple requests.

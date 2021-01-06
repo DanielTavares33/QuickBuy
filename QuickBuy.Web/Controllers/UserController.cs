@@ -27,6 +27,7 @@ namespace QuickBuy.Web.Controllers
 					return BadRequest("User already exists");
 				}
 
+				//user.IsAdmin = true;
 				_userRepository.Add(user);
 				return Ok();
 
