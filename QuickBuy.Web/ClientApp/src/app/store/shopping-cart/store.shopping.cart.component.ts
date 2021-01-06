@@ -25,6 +25,7 @@ export class StoreShoppingCart {
 
   public getProducts(): Product[] {
     var productLocalStorage = localStorage.getItem("productLocalStorage");
+
     if (productLocalStorage) {
       return JSON.parse(productLocalStorage);
     }
@@ -45,5 +46,11 @@ export class StoreShoppingCart {
 
   public update(products: Product[]) {
     localStorage.setItem("productLocalStorage", JSON.stringify(products));
+  }
+
+  public shoppingCartItems(): boolean {
+    var items = this.getProducts();
+
+    return items.length > 0 ? true : false;
   }
 }
