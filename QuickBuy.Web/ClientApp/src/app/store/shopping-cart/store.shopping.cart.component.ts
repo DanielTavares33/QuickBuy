@@ -29,6 +29,8 @@ export class StoreShoppingCart {
     if (productLocalStorage) {
       return JSON.parse(productLocalStorage);
     }
+
+    return this.products;
   }
 
   public removeProduct(product: Product) {

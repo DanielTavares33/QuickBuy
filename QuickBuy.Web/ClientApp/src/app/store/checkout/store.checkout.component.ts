@@ -21,7 +21,7 @@ export class StoreCheckoutComponent implements OnInit {
     this.estimatedShipping();
   }
 
-  constructor(private router: Router) {}
+  constructor(private router: Router) { }
 
   public updatePrice(product: Product, quantity: number) {
     if (!product.originalPrice) {
@@ -62,6 +62,10 @@ export class StoreCheckoutComponent implements OnInit {
       this.shippingValue = 0.0;
       this.updateTotal();
     }
+  }
+
+  public checkoutRequest() {
+
   }
 
   public continueShopping() {
