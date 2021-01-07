@@ -2,6 +2,9 @@ import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
 import { Product } from "src/app/model/product";
 import { StoreShoppingCart } from "../shopping-cart/store.shopping.cart.component";
+import { Request } from "../../model/request";
+import { UserService } from "src/app/services/user/user.service";
+import { ItemRequest } from "src/app/model/itemRequest";
 
 @Component({
   selector: "store-checkout",
@@ -21,7 +24,7 @@ export class StoreCheckoutComponent implements OnInit {
     this.estimatedShipping();
   }
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private userService: UserService) { }
 
   public updatePrice(product: Product, quantity: number) {
     if (!product.originalPrice) {
@@ -64,7 +67,35 @@ export class StoreCheckoutComponent implements OnInit {
     }
   }
 
+  public createRequest(): Request {
+    let request = new Request();
+    request.userId = this.userService.user.id;
+    request.postalCode = "3700";
+    request.address = "Avenida Doutor Renato Araujo";
+    request.addressNumber = "253";
+    request.city = "São João da Madeira";
+    request.distric = "Aveiro";
+    request.deliveryDateForecast = new Date();
+    request.paymentMethodId = 1;
+
+    this.products = this.shoppingCart.getProducts();
+    this.products.forEach(product => {
+      let itemRequest = new ItemRequest();
+      itemRequest.productId = product.id;
+
+      if (!product.quantityProduct) {
+        product.quantityProduct = 1;
+      }
+      itemRequest.quantity = product.quantityProduct;
+
+      request.itemsRequest.push(itemRequest);
+    });
+
+    return request;
+  }
+
   public checkoutRequest() {
+    let request = this.createRequest();
 
   }
 

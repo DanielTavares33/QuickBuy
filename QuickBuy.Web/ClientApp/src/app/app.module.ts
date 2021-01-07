@@ -17,6 +17,7 @@ import { SearchProductComponent } from "./product/search/search.product.componen
 import { StoreSearchComponent } from "./store/search/store.search.component";
 import { StoreProductComponent } from "./store/product/store.product.component";
 import { StoreCheckoutComponent } from "./store/checkout/store.checkout.component";
+import { RequestService } from "./services/request/request.service";
 
 @NgModule({
   declarations: [
@@ -46,7 +47,7 @@ import { StoreCheckoutComponent } from "./store/checkout/store.checkout.componen
       { path: "store-checkout", component: StoreCheckoutComponent, canActivate: [SaveRoutes] },
     ]),
   ],
-  providers: [UserService, ProductService],
+  providers: [UserService, ProductService, RequestService],
   bootstrap: [AppComponent],
 })
 export class AppModule { }

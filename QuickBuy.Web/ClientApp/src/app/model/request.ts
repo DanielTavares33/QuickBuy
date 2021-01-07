@@ -1,3 +1,5 @@
+import { ItemRequest } from "./itemRequest";
+
 export class Request {
   id: number;
   requestDate: Date;
@@ -7,6 +9,13 @@ export class Request {
   city: string;
   distric: string;
   address: string;
-  addressNumber: number;
+  addressNumber: string;
   paymentMethodId: number;
+
+  itemsRequest: ItemRequest[];
+
+  constructor() {
+    this.requestDate = new Date();
+    this.itemsRequest = [];
+  }
 }
