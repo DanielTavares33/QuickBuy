@@ -99,7 +99,6 @@ export class StoreCheckoutComponent implements OnInit {
     this.requestService.checkoutBuy(this.createRequest())
       .subscribe(
         requestId => {
-          console.log(requestId);
           sessionStorage.setItem("requestId", requestId.toString());
           this.products = [];
           this.shoppingCart.cleanShoppingCart();
