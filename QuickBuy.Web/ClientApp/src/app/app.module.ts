@@ -18,6 +18,7 @@ import { StoreSearchComponent } from "./store/search/store.search.component";
 import { StoreProductComponent } from "./store/product/store.product.component";
 import { StoreCheckoutComponent } from "./store/checkout/store.checkout.component";
 import { RequestService } from "./services/request/request.service";
+import { StoreCheckoutSuccessComponent } from "./store/checkout/store.checkout.success.component";
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { RequestService } from "./services/request/request.service";
     StoreSearchComponent,
     StoreProductComponent,
     StoreCheckoutComponent,
+    StoreCheckoutSuccessComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: "ng-cli-universal" }),
@@ -45,6 +47,7 @@ import { RequestService } from "./services/request/request.service";
       { path: "search-product", component: SearchProductComponent, canActivate: [SaveRoutes] },
       { path: "store-product", component: StoreProductComponent },
       { path: "store-checkout", component: StoreCheckoutComponent, canActivate: [SaveRoutes] },
+      { path: "checkout-with-success", component: StoreCheckoutSuccessComponent }
     ]),
   ],
   providers: [UserService, ProductService, RequestService],

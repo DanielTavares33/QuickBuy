@@ -1,14 +1,14 @@
-import {Component, OnInit} from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { User } from "src/app/model/user";
-import {ActivatedRoute, Router} from "@angular/router";
+import { ActivatedRoute, Router } from "@angular/router";
 import { UserService } from "src/app/services/user/user.service";
 
 @Component({
-    selector: "app-login", 
+    selector: "app-login",
     templateUrl: "./login.component.html",
     styleUrls: ["./login.component.css"]
 })
-export class LoginComponent implements OnInit{
+export class LoginComponent implements OnInit {
     public user;
     public userAuthentication: boolean;
     public returnUrl: string;
@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit{
         this.user = new User();
     }
 
-    login(){
+    login() {
         this.active_spinner = true;
         this.userService.verifyUser(this.user).subscribe(
             user_json => {
@@ -31,7 +31,7 @@ export class LoginComponent implements OnInit{
 
                 if (this.returnUrl == null) {
                     this.router.navigate(['/'])
-                }else {
+                } else {
                     this.router.navigate([this.returnUrl]);
                 }
             },
@@ -40,12 +40,6 @@ export class LoginComponent implements OnInit{
                 this.active_spinner = false;
             }
         );
-
-        // if (this.user.email == "dantavper@hotmail.com" && this.user.password == "123") {
-        //     sessionStorage.setItem("user-authenticated","1");
-        //     this.router.navigate([this.returnUrl])
-        // }
-
     }
-        
+
 }

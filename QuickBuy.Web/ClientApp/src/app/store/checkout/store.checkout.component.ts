@@ -5,6 +5,7 @@ import { StoreShoppingCart } from "../shopping-cart/store.shopping.cart.componen
 import { Request } from "../../model/request";
 import { UserService } from "src/app/services/user/user.service";
 import { ItemRequest } from "src/app/model/itemRequest";
+import { RequestService } from "src/app/services/request/request.service";
 
 @Component({
   selector: "store-checkout",
@@ -24,7 +25,7 @@ export class StoreCheckoutComponent implements OnInit {
     this.estimatedShipping();
   }
 
-  constructor(private router: Router, private userService: UserService) { }
+  constructor(private router: Router, private userService: UserService, private requestService: RequestService) { }
 
   public updatePrice(product: Product, quantity: number) {
     if (!product.originalPrice) {
@@ -74,7 +75,7 @@ export class StoreCheckoutComponent implements OnInit {
     request.address = "Avenida Doutor Renato Araujo";
     request.addressNumber = "253";
     request.city = "São João da Madeira";
-    request.distric = "Aveiro";
+    request.district = "Aveiro";
     request.deliveryDateForecast = new Date();
     request.paymentMethodId = 1;
 
@@ -95,8 +96,20 @@ export class StoreCheckoutComponent implements OnInit {
   }
 
   public checkoutRequest() {
-    let request = this.createRequest();
+    this.requestService.checkoutBuy(this.createRequest())
+      .subscribe(
+        requestId => {
+          console.log(requestId);
+          sessionStorage.setItem("requestId", requestId.toString());
+          this.products = [];
+          this.shoppingCart.cleanShoppingCart();
 
+          this.router.navigate(["/checkout-with-success"]);
+        },
+        e => {
+          console.log(e.error);
+        }
+      );
   }
 
   public continueShopping() {

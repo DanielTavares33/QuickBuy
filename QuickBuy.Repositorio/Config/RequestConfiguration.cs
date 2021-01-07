@@ -29,7 +29,7 @@ namespace QuickBuy.Repositorio.Config
 				.HasMaxLength(100);
 
 			builder
-				.Property(r => r.Distric)
+				.Property(r => r.District)
 				.IsRequired()
 				.HasMaxLength(100);
 

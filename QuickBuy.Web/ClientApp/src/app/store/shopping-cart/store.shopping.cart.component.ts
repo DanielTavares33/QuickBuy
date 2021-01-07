@@ -55,4 +55,8 @@ export class StoreShoppingCart {
 
     return items.length > 0 ? true : false;
   }
+
+  public cleanShoppingCart() {
+    localStorage.setItem("productLocalStorage", "");
+  }
 }

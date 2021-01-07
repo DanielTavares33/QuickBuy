@@ -7,7 +7,7 @@ export class Request {
   deliveryDateForecast: Date;
   postalCode: string;
   city: string;
-  distric: string;
+  district: string;
   address: string;
   addressNumber: string;
   paymentMethodId: number;
