@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "d84UCqOk3+XtyGTNq5y79yXW5ZN/fvatbz9s//8Jp8xCRqzVRsfBhONf9zMdvkag6G+wF2VE+P4fiFLKAFpvpw==",
+  "dgSpecHash": "Djda8Dw5wS8sUn5NGqFwRopGG8WCET4mh3INMJA/jKzWFPnSYzsgrqHteWOtWw9m/nQThsLWQWjdsOioS/jU4w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\danie\\source\\repos\\DanielTavares33\\QuickBuy\\QuickBuy.Repositorio\\QuickBuy.Repositorio.csproj",
+  "projectFilePath": "C:\\Users\\danie\\source\\repos\\QuickBuy\\QuickBuy.Repositorio\\QuickBuy.Repositorio.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\danie\\.nuget\\packages\\castle.core\\4.2.1\\castle.core.4.2.1.nupkg.sha512",
     "C:\\Users\\danie\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

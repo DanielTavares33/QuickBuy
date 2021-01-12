@@ -10,7 +10,7 @@ import { ProductService } from "src/app/services/product/product.service";
 })
 export class SearchProductComponent implements OnInit {
   public products: Product[];
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   constructor(private productService: ProductService, private router: Router) {
     this.productService.getAllProducts().subscribe(
@@ -24,7 +24,6 @@ export class SearchProductComponent implements OnInit {
   }
 
   public addProduct() {
-    sessionStorage.clear();
     this.router.navigate(["/product"]);
   }
 

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\danie\\source\\repos\\DanielTavares33\\QuickBuy\\QuickBuy.Repositorio\\QuickBuy.Repositorio.csproj": {}
+    "C:\\Users\\danie\\source\\repos\\QuickBuy\\QuickBuy.Repositorio\\QuickBuy.Repositorio.csproj": {}
   },
   "projects": {
-    "C:\\Users\\danie\\source\\repos\\DanielTavares33\\QuickBuy\\QuickBuy.Dominio\\QuickBuy.Dominio.csproj": {
+    "C:\\Users\\danie\\source\\repos\\QuickBuy\\QuickBuy.Dominio\\QuickBuy.Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\danie\\source\\repos\\DanielTavares33\\QuickBuy\\QuickBuy.Dominio\\QuickBuy.Dominio.csproj",
+        "projectUniqueName": "C:\\Users\\danie\\source\\repos\\QuickBuy\\QuickBuy.Dominio\\QuickBuy.Dominio.csproj",
         "projectName": "QuickBuy.Dominio",
-        "projectPath": "C:\\Users\\danie\\source\\repos\\DanielTavares33\\QuickBuy\\QuickBuy.Dominio\\QuickBuy.Dominio.csproj",
+        "projectPath": "C:\\Users\\danie\\source\\repos\\QuickBuy\\QuickBuy.Dominio\\QuickBuy.Dominio.csproj",
         "packagesPath": "C:\\Users\\danie\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\danie\\source\\repos\\DanielTavares33\\QuickBuy\\QuickBuy.Dominio\\obj\\",
+        "outputPath": "C:\\Users\\danie\\source\\repos\\QuickBuy\\QuickBuy.Dominio\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -29,7 +29,6 @@
         },
         "frameworks": {
           "netstandard2.0": {
-            "targetAlias": "netstandard2.0",
             "projectReferences": {}
           }
         },
@@ -41,7 +40,6 @@
       },
       "frameworks": {
         "netstandard2.0": {
-          "targetAlias": "netstandard2.0",
           "dependencies": {
             "NETStandard.Library": {
               "suppressParent": "All",
@@ -58,14 +56,14 @@
         }
       }
     },
-    "C:\\Users\\danie\\source\\repos\\DanielTavares33\\QuickBuy\\QuickBuy.Repositorio\\QuickBuy.Repositorio.csproj": {
+    "C:\\Users\\danie\\source\\repos\\QuickBuy\\QuickBuy.Repositorio\\QuickBuy.Repositorio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\danie\\source\\repos\\DanielTavares33\\QuickBuy\\QuickBuy.Repositorio\\QuickBuy.Repositorio.csproj",
+        "projectUniqueName": "C:\\Users\\danie\\source\\repos\\QuickBuy\\QuickBuy.Repositorio\\QuickBuy.Repositorio.csproj",
         "projectName": "QuickBuy.Repositorio",
-        "projectPath": "C:\\Users\\danie\\source\\repos\\DanielTavares33\\QuickBuy\\QuickBuy.Repositorio\\QuickBuy.Repositorio.csproj",
+        "projectPath": "C:\\Users\\danie\\source\\repos\\QuickBuy\\QuickBuy.Repositorio\\QuickBuy.Repositorio.csproj",
         "packagesPath": "C:\\Users\\danie\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\danie\\source\\repos\\DanielTavares33\\QuickBuy\\QuickBuy.Repositorio\\obj\\",
+        "outputPath": "C:\\Users\\danie\\source\\repos\\QuickBuy\\QuickBuy.Repositorio\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -83,10 +81,9 @@
         },
         "frameworks": {
           "netstandard2.0": {
-            "targetAlias": "netstandard2.0",
             "projectReferences": {
-              "C:\\Users\\danie\\source\\repos\\DanielTavares33\\QuickBuy\\QuickBuy.Dominio\\QuickBuy.Dominio.csproj": {
-                "projectPath": "C:\\Users\\danie\\source\\repos\\DanielTavares33\\QuickBuy\\QuickBuy.Dominio\\QuickBuy.Dominio.csproj"
+              "C:\\Users\\danie\\source\\repos\\QuickBuy\\QuickBuy.Dominio\\QuickBuy.Dominio.csproj": {
+                "projectPath": "C:\\Users\\danie\\source\\repos\\QuickBuy\\QuickBuy.Dominio\\QuickBuy.Dominio.csproj"
               }
             }
           }
@@ -99,7 +96,6 @@
       },
       "frameworks": {
         "netstandard2.0": {
-          "targetAlias": "netstandard2.0",
           "dependencies": {
             "Microsoft.EntityFrameworkCore.Proxies": {
               "target": "Package",

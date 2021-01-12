@@ -43,13 +43,13 @@ namespace QuickBuy.Web
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IRequestRepository, RequestRepository>();
 
-            // In production, the Angular files will be served from this directory
-            //services.AddSpaStaticFiles(configuration =>
-            //{
-            //    configuration.RootPath = "ClientApp/dist";
-            //});
+			// In production, the Angular files will be served from this directory
+			services.AddSpaStaticFiles(configuration =>
+			{
+				configuration.RootPath = "ClientApp/dist";
+			});
 
-        }
+		}
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
@@ -67,7 +67,7 @@ namespace QuickBuy.Web
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-            //app.UseSpaStaticFiles();
+            app.UseSpaStaticFiles();
             
             app.UseMvc(routes =>
             {
